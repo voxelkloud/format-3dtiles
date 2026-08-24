@@ -1,0 +1,56 @@
+{
+  "name": "@voxelkloud/format-3dtiles",
+  "version": "0.5.0",
+  "description": "The 3D Tiles driver for voxelkloud: tileset.json, external tilesets, implicit tiling, and point cloud content as .pnts or glTF POINTS.",
+  "license": "MIT",
+  "keywords": [
+    "point-cloud",
+    "lidar",
+    "3d-tiles",
+    "3dtiles",
+    "tileset",
+    "pnts",
+    "gltf",
+    "cesium",
+    "webgpu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voxelkloud/format-3dtiles.git"
+  },
+  "homepage": "https://github.com/voxelkloud/voxelkloud",
+  "bugs": {
+    "url": "https://github.com/voxelkloud/voxelkloud/issues"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@voxelkloud/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
